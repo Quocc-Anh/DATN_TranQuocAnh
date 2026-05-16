@@ -15,6 +15,7 @@ class Lesson(Base):
     summary = Column(Text, default="")
     content = Column(Text, default="")
     video_url = Column(String(1000), default="")
+    source_url = Column(String(1000), default="")
     duration_minutes = Column(Integer, default=10)
     order_index = Column(Integer, default=0)
     created_at = Column(DateTime, default=datetime.utcnow)

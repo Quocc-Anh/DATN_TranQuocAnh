@@ -11,6 +11,7 @@ class LessonOut(BaseModel):
     summary: str
     content: str
     video_url: str
+    source_url: str = ""
     duration_minutes: int
     order_index: int
     progress_percent: int = 0

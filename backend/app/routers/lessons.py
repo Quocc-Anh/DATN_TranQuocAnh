@@ -33,6 +33,7 @@ def get_lesson(
         summary=lesson.summary or "",
         content=lesson.content or "",
         video_url=lesson.video_url or "",
+        source_url=lesson.source_url or "",
         duration_minutes=lesson.duration_minutes,
         order_index=lesson.order_index,
         progress_percent=prog.progress_percent if prog else 0,
