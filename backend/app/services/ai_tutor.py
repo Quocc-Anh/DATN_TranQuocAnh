@@ -14,7 +14,7 @@ from app.models import ChatMessage, Lesson, Subject
 
 GEMINI_URL = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
-    "gemini-1.5-flash-latest:generateContent"
+    "gemini-flash-latest:generateContent"
 )
 
 SYSTEM_PROMPT = (
@@ -47,14 +47,14 @@ def _fallback_reply(question: str, context: str) -> str:
         if len(snippet) > 900:
             snippet = snippet[:900] + "..."
         return (
-            "Mình chưa được kết nối với mô hình AI bên ngoài (chưa cấu hình "
-            "GEMINI_API_KEY), nên tạm thời gửi lại nội dung liên quan trong bài học để bạn tham khảo:\n\n"
+            "Hệ thống tạm thời chưa trả lời được câu hỏi của bạn. "
+            "Bạn xem phần nội dung liên quan trong bài học bên dưới để tham khảo nhé:\n\n"
             f"{snippet}\n\n"
-            "Hãy đọc kỹ phần trên và thử trả lời câu hỏi: \"" + question.strip() + "\"."
+            "Sau đó thử trả lời câu hỏi: \"" + question.strip() + "\"."
         )
     return (
-        "Mình chưa được kết nối với mô hình AI (chưa có GEMINI_API_KEY) và bạn cũng chưa chọn bài "
-        "học cụ thể. Vui lòng mở một bài học và đặt câu hỏi liên quan tới bài đó."
+        "Hệ thống tạm thời chưa trả lời được câu hỏi. "
+        "Vui lòng mở một bài học cụ thể rồi đặt câu hỏi liên quan đến bài đó."
     )
 
 
