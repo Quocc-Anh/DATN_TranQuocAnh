@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import List, Optional
 
 from pydantic import BaseModel
@@ -27,6 +28,7 @@ class SubjectOut(BaseModel):
     lesson_count: int = 0
     completed_lesson_count: int = 0
     progress_percent: int = 0
+    is_enrolled: bool = False
 
     class Config:
         orm_mode = True
@@ -34,3 +36,14 @@ class SubjectOut(BaseModel):
 
 class SubjectDetail(SubjectOut):
     lessons: List[LessonBrief] = []
+
+
+class ContinueLearning(BaseModel):
+    subject_id: int
+    subject_name: str
+    subject_color: str
+    subject_slug: str
+    lesson_id: int
+    lesson_title: str
+    lesson_progress_percent: int
+    updated_at: Optional[datetime] = None
