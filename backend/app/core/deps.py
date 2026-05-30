@@ -33,3 +33,12 @@ def get_current_user(
     if user is None or not user.is_active:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User disabled")
     return user
+
+
+def get_current_teacher(user: User = Depends(get_current_user)) -> User:
+    if user.role != "teacher":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Chỉ giáo viên mới có quyền thực hiện thao tác này",
+        )
+    return user
