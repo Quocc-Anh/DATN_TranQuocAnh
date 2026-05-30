@@ -1,12 +1,19 @@
 from typing import Optional
 
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, validator
 
 
 class UserRegister(BaseModel):
     email: EmailStr
     full_name: str
     password: str
+    role: str = "student"
+
+    @validator("role")
+    def valid_role(cls, v):
+        if v not in ("student", "teacher"):
+            raise ValueError("role phải là student hoặc teacher")
+        return v
 
 
 class UserLogin(BaseModel):
@@ -19,6 +26,7 @@ class UserOut(BaseModel):
     email: EmailStr
     full_name: str
     avatar_url: str = ""
+    role: str = "student"
     is_admin: bool
 
     class Config:
