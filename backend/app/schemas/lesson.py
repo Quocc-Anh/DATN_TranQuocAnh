@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 class LessonOut(BaseModel):
     id: int
-    subject_id: int
+    classroom_id: int
     title: str
     summary: str
     content: str
@@ -18,6 +18,23 @@ class LessonOut(BaseModel):
 
     class Config:
         orm_mode = True
+
+
+class LessonCreate(BaseModel):
+    title: str
+    summary: str = ""
+    content: str = ""
+    video_url: str = ""
+    duration_minutes: int = 10
+
+
+class LessonUpdate(BaseModel):
+    title: Optional[str] = None
+    summary: Optional[str] = None
+    content: Optional[str] = None
+    video_url: Optional[str] = None
+    duration_minutes: Optional[int] = None
+    order_index: Optional[int] = None
 
 
 class ProgressUpdate(BaseModel):
