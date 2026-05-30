@@ -10,7 +10,9 @@ class Lesson(Base):
     __tablename__ = "lessons"
 
     id = Column(Integer, primary_key=True, index=True)
-    subject_id = Column(Integer, ForeignKey("subjects.id", ondelete="CASCADE"), nullable=False)
+    classroom_id = Column(
+        Integer, ForeignKey("classrooms.id", ondelete="CASCADE"), nullable=False
+    )
     title = Column(String(500), nullable=False)
     summary = Column(Text, default="")
     content = Column(Text, default="")
@@ -20,4 +22,4 @@ class Lesson(Base):
     order_index = Column(Integer, default=0)
     created_at = Column(DateTime, default=datetime.utcnow)
 
-    subject = relationship("Subject", back_populates="lessons")
+    classroom = relationship("Classroom", back_populates="lessons")
