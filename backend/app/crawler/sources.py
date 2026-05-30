@@ -55,32 +55,32 @@ SOURCES: List[SourceSubject] = [
         "lessons": [
             {
                 "title": "Bài 1: Liên hợp quốc",
-                "url": "https://vietjack.com/lich-su-12-kn/bai-1-lien-hop-quoc.jsp",
+                "url": "https://vietjack.com/lich-su-12-kn/ly-thuyet-bai-1-lien-hop-quoc.jsp",
                 "duration": 25,
             },
             {
                 "title": "Bài 2: Trật tự thế giới trong Chiến tranh lạnh",
-                "url": "https://vietjack.com/lich-su-12-kn/bai-2-trat-tu-the-gioi-trong-chien-tranh-lanh.jsp",
+                "url": "https://vietjack.com/lich-su-12-kn/ly-thuyet-bai-2-trat-tu-the-gioi-trong-chien-tranh-lanh.jsp",
                 "duration": 25,
             },
             {
                 "title": "Bài 3: Trật tự thế giới sau Chiến tranh lạnh",
-                "url": "https://vietjack.com/lich-su-12-kn/bai-3-trat-tu-the-gioi-sau-chien-tranh-lanh.jsp",
+                "url": "https://vietjack.com/lich-su-12-kn/ly-thuyet-bai-3-trat-tu-the-gioi-sau-chien-tranh-lanh.jsp",
                 "duration": 22,
             },
             {
                 "title": "Bài 6: Cách mạng tháng Tám năm 1945",
-                "url": "https://vietjack.com/lich-su-12-kn/bai-6-cach-mang-thang-8-nam-1945.jsp",
+                "url": "https://vietjack.com/lich-su-12-kn/ly-thuyet-bai-6-cach-mang-thang-8-nam-1945.jsp",
                 "duration": 30,
             },
             {
                 "title": "Bài 7: Cuộc kháng chiến chống thực dân Pháp (1945-1954)",
-                "url": "https://vietjack.com/lich-su-12-kn/bai-7-cuoc-khang-chien-chong-thuc-dan-phap.jsp",
+                "url": "https://vietjack.com/lich-su-12-kn/ly-thuyet-bai-7-cuoc-khang-chien-chong-thuc-dan-phap.jsp",
                 "duration": 30,
             },
             {
                 "title": "Bài 8: Cuộc kháng chiến chống Mỹ cứu nước (1954-1975)",
-                "url": "https://vietjack.com/lich-su-12-kn/bai-8-cuoc-khang-chien-chong-my-cuu-nuoc.jsp",
+                "url": "https://vietjack.com/lich-su-12-kn/ly-thuyet-bai-8-cuoc-khang-chien-chong-my-cuu-nuoc.jsp",
                 "duration": 30,
             },
         ],
@@ -95,37 +95,37 @@ SOURCES: List[SourceSubject] = [
         "lessons": [
             {
                 "title": "Bài 1: Vị trí địa lí và phạm vi lãnh thổ",
-                "url": "https://vietjack.com/dia-li-12-kn/bai-1-vi-tri-dia-li-va-pham-vi-lanh-tho.jsp",
+                "url": "https://vietjack.com/dia-li-12-kn/ly-thuyet-bai-1-vi-tri-dia-li-va-pham-vi-lanh-tho.jsp",
                 "duration": 22,
             },
             {
                 "title": "Bài 2: Thiên nhiên nhiệt đới ẩm gió mùa",
-                "url": "https://vietjack.com/dia-li-12-kn/bai-2-thien-nhien-nhiet-doi-am-gio-mua.jsp",
+                "url": "https://vietjack.com/dia-li-12-kn/ly-thuyet-bai-2-thien-nhien-nhiet-doi-am-gio-mua.jsp",
                 "duration": 25,
             },
             {
                 "title": "Bài 3: Sự phân hoá đa dạng của thiên nhiên",
-                "url": "https://vietjack.com/dia-li-12-kn/bai-3-su-phan-hoa-da-dang-cua-thien-nhien.jsp",
+                "url": "https://vietjack.com/dia-li-12-kn/ly-thuyet-bai-3-su-phan-hoa-da-dang-cua-thien-nhien.jsp",
                 "duration": 22,
             },
             {
                 "title": "Bài 5: Vấn đề sử dụng hợp lí tài nguyên thiên nhiên và bảo vệ môi trường",
-                "url": "https://vietjack.com/dia-li-12-kn/bai-5-van-de-su-dung-hop-li-tai-nguyen-thien-nhien-va-bao-ve-moi-truong.jsp",
+                "url": "https://vietjack.com/dia-li-12-kn/ly-thuyet-bai-5-van-de-su-dung-hop-li-tai-nguyen-thien-nhien-va-bao-ve-moi-truong.jsp",
                 "duration": 22,
             },
             {
                 "title": "Bài 6: Dân số Việt Nam",
-                "url": "https://vietjack.com/dia-li-12-kn/bai-6-dan-so-viet-nam.jsp",
+                "url": "https://vietjack.com/dia-li-12-kn/ly-thuyet-bai-6-dan-so-viet-nam.jsp",
                 "duration": 20,
             },
             {
                 "title": "Bài 7: Lao động và việc làm",
-                "url": "https://vietjack.com/dia-li-12-kn/bai-7-lao-dong-va-viec-lam.jsp",
+                "url": "https://vietjack.com/dia-li-12-kn/ly-thuyet-bai-7-lao-dong-va-viec-lam.jsp",
                 "duration": 20,
             },
             {
                 "title": "Bài 8: Đô thị hoá",
-                "url": "https://vietjack.com/dia-li-12-kn/bai-8-do-thi-hoa.jsp",
+                "url": "https://vietjack.com/dia-li-12-kn/ly-thuyet-bai-8-do-thi-hoa.jsp",
                 "duration": 20,
             },
         ],
@@ -140,37 +140,37 @@ SOURCES: List[SourceSubject] = [
         "lessons": [
             {
                 "title": "Bài 1: DNA và cơ chế tái bản DNA",
-                "url": "https://vietjack.com/sinh-hoc-12-kn/bai-1-dna-va-co-che-tai-ban-dna.jsp",
+                "url": "https://vietjack.com/sinh-hoc-12-kn/ly-thuyet-bai-1-dna-va-co-che-tai-ban-dna.jsp",
                 "duration": 25,
             },
             {
                 "title": "Bài 2: Gene, quá trình truyền đạt thông tin di truyền và hệ gene",
-                "url": "https://vietjack.com/sinh-hoc-12-kn/bai-2-gene-qua-trinh-truyen-dat-thong-tin-di-truyen-va-he-gene.jsp",
+                "url": "https://vietjack.com/sinh-hoc-12-kn/ly-thuyet-bai-2-gene-qua-trinh-truyen-dat-thong-tin-di-truyen-va-he-gene.jsp",
                 "duration": 25,
             },
             {
                 "title": "Bài 3: Điều hoà biểu hiện gene",
-                "url": "https://vietjack.com/sinh-hoc-12-kn/bai-3-dieu-hoa-bieu-hien-gene.jsp",
+                "url": "https://vietjack.com/sinh-hoc-12-kn/ly-thuyet-bai-3-dieu-hoa-bieu-hien-gene.jsp",
                 "duration": 22,
             },
             {
                 "title": "Bài 4: Đột biến gene",
-                "url": "https://vietjack.com/sinh-hoc-12-kn/bai-4-dot-bien-gene.jsp",
+                "url": "https://vietjack.com/sinh-hoc-12-kn/ly-thuyet-bai-4-dot-bien-gene.jsp",
                 "duration": 22,
             },
             {
                 "title": "Bài 5: Công nghệ di truyền",
-                "url": "https://vietjack.com/sinh-hoc-12-kn/bai-5-cong-nghe-di-truyen.jsp",
+                "url": "https://vietjack.com/sinh-hoc-12-kn/ly-thuyet-bai-5-cong-nghe-di-truyen.jsp",
                 "duration": 22,
             },
             {
                 "title": "Bài 7: Cấu trúc và chức năng của nhiễm sắc thể",
-                "url": "https://vietjack.com/sinh-hoc-12-kn/bai-7-cau-truc-va-chuc-nang-cua-nhiem-sac-the.jsp",
+                "url": "https://vietjack.com/sinh-hoc-12-kn/ly-thuyet-bai-7-cau-truc-va-chuc-nang-cua-nhiem-sac-the.jsp",
                 "duration": 22,
             },
             {
                 "title": "Bài 8: Học thuyết di truyền của Mendel",
-                "url": "https://vietjack.com/sinh-hoc-12-kn/bai-8-hoc-thuyet-di-truyen-cua-mendel.jsp",
+                "url": "https://vietjack.com/sinh-hoc-12-kn/ly-thuyet-bai-8-hoc-thuyet-di-truyen-cua-mendel.jsp",
                 "duration": 25,
             },
         ],

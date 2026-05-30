@@ -112,6 +112,18 @@ SPAM_KEYWORDS = (
     "từ 80k", "tài liệu vip", "vietjack đã", "vietjack.com",
     "tải về", "tải xuống", "xem thêm:", "xem thêm các",
     "lưu trữ:", "sách tổng ôn", "khoá học", "khóa học",
+    # noise trang giải bài tập / điều hướng
+    "xem lời giải", "lời giải bài", "dừng lại và suy ngẫm",
+    "luyện tập và vận dụng", "mở đầu trang", "vận dụng trang",
+    "giải sgk", "giải sbt", "giải vbt", "trắc nghiệm",
+    "video bài giảng", "bài giảng:", "đăng ký khóa học",
+    "với tóm tắt lý thuyết", "hay nhất, ngắn gọn",
+)
+
+# các dòng kiểu "Câu hỏi 2 trang 39 Sinh học 12", "Bài tập 1 trang 26 ..."
+_NAV_RE = re.compile(
+    r"^(câu hỏi|bài tập|luyện tập|vận dụng|mở đầu|thực hành)\b.*\btrang\s*\d+",
+    re.IGNORECASE,
 )
 
 
@@ -122,6 +134,8 @@ def _is_spam(line: str) -> bool:
     if any(k in low for k in SPAM_KEYWORDS):
         return True
     if low.startswith(("hot ", "- hot")):
+        return True
+    if _NAV_RE.match(low.lstrip("-• ").strip()):
         return True
     return False
 
@@ -194,9 +208,8 @@ def _summary_from(content: str, soup: BeautifulSoup) -> str:
     return _truncate(content, MAX_SUMMARY_CHARS)
 
 
-def fetch(url: str, fallback_title: str) -> FetchedLesson:
-    """Tải một URL bài học, trả về tiêu đề + tóm tắt + nội dung đã làm sạch."""
-    resp = requests.get(
+def _get(url: str) -> requests.Response:
+    return requests.get(
         url,
         headers={
             "User-Agent": USER_AGENT,
@@ -204,6 +217,16 @@ def fetch(url: str, fallback_title: str) -> FetchedLesson:
         },
         timeout=REQUEST_TIMEOUT,
     )
+
+
+def fetch(url: str, fallback_title: str) -> FetchedLesson:
+    """Tải một URL bài học, trả về tiêu đề + tóm tắt + nội dung đã làm sạch.
+
+    Nếu trang lý thuyết 404, tự lùi về trang gốc (bỏ tiền tố 'ly-thuyet-').
+    """
+    resp = _get(url)
+    if resp.status_code == 404 and "ly-thuyet-" in url:
+        resp = _get(url.replace("ly-thuyet-", ""))
     resp.raise_for_status()
     resp.encoding = resp.apparent_encoding or "utf-8"
     soup = BeautifulSoup(resp.text, "lxml")
