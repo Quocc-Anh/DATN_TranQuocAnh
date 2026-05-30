@@ -6,11 +6,11 @@ from fastapi.staticfiles import StaticFiles
 
 from app.core.config import settings
 from app.core.database import Base, engine
-from app.routers import auth, chat, lessons, subjects
+from app.routers import auth, chat, classrooms, lessons, reviews
 
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="E-Learning API", version="0.2.0")
+app = FastAPI(title="E-Learning API", version="0.3.0")
 
 origins = [o.strip() for o in settings.CORS_ORIGINS.split(",") if o.strip()]
 app.add_middleware(
@@ -30,7 +30,8 @@ app.mount(
 )
 
 app.include_router(auth.router)
-app.include_router(subjects.router)
+app.include_router(classrooms.router)
+app.include_router(reviews.router)
 app.include_router(lessons.router)
 app.include_router(chat.router)
 
