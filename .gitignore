@@ -10,11 +10,17 @@ venv/
 .env
 .env.local
 
-# Database / logs
-backend/data/*.db
-backend/data/*.db-journal
+# Database / logs / dữ liệu chạy local
+backend/data/
 backend/server.log
 backend/run.log
+backend/OK
+
+# AI service local (tạm thời chưa đẩy)
+ai_service/
+
+# README sinh kèm
+README.md
 
 # OS / editors
 .DS_Store
